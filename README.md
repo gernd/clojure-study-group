@@ -3,6 +3,7 @@ Let's learn clojure together
 
 # Where to start
 [Official Clojure Getting Started guide](https://clojure.org/guides/getting_started)
+
 [Clojure for the Brave and True](https://www.braveclojure.com/)
 
 
