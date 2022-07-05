@@ -19,5 +19,7 @@ Let's learn clojure together
 * Spacemacs
 ...
 
+# Useful links 
 
+[Functional programming jargon](https://github.com/hemanth/functional-programming-jargon)
 
