@@ -1,15 +1,12 @@
-Notes for Rich Hickey Talk
-
-https://www.youtube.com/watch?v=6mTbuzafcII&t=1576s
-TODO link
+# Notes for [Rich Hickey's Talk on Transducers](https://www.youtube.com/watch?v=6mTbuzafcII&t=1576s)
 
 * what are they?
- * extract the essence of map/filter ...
+  * extract the essence of map/filter ...
 
 * processes that can be modelled this way
- * where each steps ingests an input 
- * building a collection is just one instance
- * seeded left reduce is the generalization
+  * where each steps ingests an input 
+  * building a collection is just one instance
+  * seeded left reduce is the generalization
 
 * transducers carry inputs across a series of transformations
 
@@ -19,7 +16,7 @@ TODO link
 
 * problem: no reuse
 * every new collection defines its own version of map/filter...
- * streams, channels, observables, my Collection...
+  * streams, channels, observables, my Collection...
  
 * mapcatting /filtering .. create transducers
 
