@@ -23,3 +23,7 @@ Let's learn clojure together
 
 [Functional programming jargon](https://github.com/hemanth/functional-programming-jargon)
 
+
+# Ideas 
+* Xml Zipping
+

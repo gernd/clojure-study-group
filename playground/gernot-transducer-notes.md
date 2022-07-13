@@ -36,10 +36,4 @@
 * -> modify a process by transforming its reducing function
 * transducer gets the "step" as an argument
 
-
-TODO Gernot: reread about left folding vs. right folding
-
-* we stopped at 31:20
-
-
- 
+TODO Gernot: reread about left folding vs. right folding 
