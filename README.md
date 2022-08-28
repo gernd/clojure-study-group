@@ -26,4 +26,3 @@ Let's learn clojure together
 
 # Ideas 
 * Xml Zipping
-

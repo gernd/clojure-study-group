@@ -1,3 +1,6 @@
 Idea: Learn together about Category Theory to have a good understanding of functional programming foundations.
 
-TODO: Add link to category theory book
+We read https://github.com/hmemcpy/milewski-ctfp-pdf together and discuss about it
+
+# Chapter 1
+## Notes Gernot
