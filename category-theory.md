@@ -44,6 +44,8 @@ graph TD;
   
 ### Challenges
 
+Challenge 1-3
+
 ```clojure
 (ns test-clojure-date.devhaus
   (:require
@@ -64,3 +66,23 @@ graph TD;
  (inc 2)
  ((my-comp inc my-id) 2))
 ```
+
+4
+* associativity: yes
+* id: link to self -> does not always exist
+-> no category
+
+5
+* one is not automatically befriended to oneself
+* arrows do not compose (if A is friend to B and B is friend to C, A is not friend to C)
+
+6
+
+* when there is an edge for each node that goes to the same node
+* when for all nodes the following holds: if there is an edge from node A to node B and there is an edge from node B to node c  then there is an edge from node A tp node C
+
+
+
+
+
+
