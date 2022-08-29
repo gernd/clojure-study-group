@@ -58,8 +58,3 @@ or in Pseudo Code
  (inc 2)
  ((my-comp inc my-id) 2))
 ```
-
-
- 
-
-
