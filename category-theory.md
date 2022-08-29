@@ -13,6 +13,12 @@ A -> C
 * notation: g (circle) f
 or in Pseudo Code
 (g (f x)) (in Clojure there is the comp function)
+```mermaid
+graph TD;
+    a((A))-- f -->b((B));
+    b -- g -->c((C));
+    a -- f composed with g -->c;
+```
 ### Properties of composition
 * Associativity (h ◦ g) f = h ◦ (g ◦ f)
 ####  Exististence of composition unit
