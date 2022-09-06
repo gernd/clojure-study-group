@@ -49,5 +49,44 @@
     * -> computational effects can be mapped to monads!
 * having a mathematical model allows for formal proofs of software
 ## Pure and Dirty Functions
+* mathematical function: mapping of values to values
+* function having no side effects (e.g. computation of square root) can be easily modelled as a mathematical function
+* in a purely functional programming language like Haskell: all functions are pure -> easier to give them denotational semantics and model them using category theory
+* for other languages: always possible to restrict yourself to a pure subset
+* monads let us model all kind of affects using only pure functions
+## Examples of types
+* exotic types: empty set (not inhabited by any values)
+    * in Haskell: void
+    * Void -> a : polymorphic function in its return type, can never be called
+    * Void represents falsity
+    * in C++ there is no such type "no type"
+  * type that represents a singleton sets, has only one value
+    * just value
+    * in C++: void
+    * in Haskell: () (Unit)
+    * function int () {return 44}; : Unit -> Int
+      ```mermaid
+        graph TD
+        a(("{Unit}")) -->b((Int))
+      ```
+      * every call of the function is a different way of picking one element from the target type (in tthis case 44)
+      * -> call of the function is a different way of describing the element 44 from the int type
+      * pure functions that return Unit (or Void) discard their arguemnt (as they are not allowed to have side effects)
+    * unit: A -> Void
+    * unit x = ()
+      * maps every element of A to the element "Void" of the single set
+      * implementation does not depend on the type of the argument -> "parametrically polymorphic"
+    ```mermaid
+      graph TD
+          a((String)) -->b(("{Unit}"))
+          c((Integer)) -->b(("{Unit}"))
+          d((Float)) -->b(("{Unit}"))
+    ```
+  * two-element set: $Bool = {True, False}$
+  * functions to Bool are called predicates
+## Challenges
+
+    
+
 
 
