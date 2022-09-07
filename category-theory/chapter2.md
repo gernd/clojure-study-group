@@ -132,5 +132,27 @@ Found result in cache for args  nil
 of course, the it is not random anymore
 
 ### 3
+TODO
 
+### 4
 
+a) is pure
+b) not pure, has side effects and will return different results
+c) not pure, has side effects (printing to screen)
+d) not pure, static y is initialized with 0 but then changed -> will return different results
+
+### 5
+
+* true -> true
+* false -> false
+
+(this is one function "id")
+
+* true -> false
+* false -> true
+
+(this is one function "negate")
+
+-> in total these  2 functions would be sufficient to implement all possible mappings
+
+in theory there are an endless number of functions implementing these mappings
