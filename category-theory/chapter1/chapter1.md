@@ -47,6 +47,7 @@ Challenge 1-3
   (:require
    [clojure.string :as str]))
 
+
 (defn my-id [sth]
   sth)
 
@@ -58,14 +59,17 @@ Challenge 1-3
 (my-composed-fn "here is something")
 
 ;; is id preserved?
+;; only tested for one value
 (=
- (inc 2)
+ ((my-comp my-id inc) 2)
  ((my-comp inc my-id) 2))
 ```
 
 4
 * associativity: yes
-* id: link to self -> does not always exist
+* id: there exists way to link to the page itself
+* composition works: linking from A to B and then from B to page C is the same result as linking 
+from page A to page C
 -> no category
 
 5
@@ -75,4 +79,5 @@ Challenge 1-3
 6
 
 * when there is an edge for each node that goes to the same node
-* when for all nodes the following holds: if there is an edge from node A to node B and there is an edge from node B to node c  then there is an edge from node A tp node C
+* when for all nodes the following holds: if there is an edge from node A to node B and there is an edge from node B to node c  then it is equivalent to an edge from A to B
+* should not be weighed
