@@ -16,7 +16,7 @@
 * in Haskell: common approach to start with the type definitions
 * strong static typing is often used as an excuse for not testing the code (if it compiles, then it must be correct)
   * does not necessarily result in better code quality
-* vice versa: unit testing is not a replacement for types 
+* vice versa: unit testing is not a replacement for types
 ## What are Types?
 * simplest intuition: sets of values (e.g. type Bool is a set of two values: True and False, Char is a set of all Unicode Characters..)
   * sets can be finite or infinite (example of an infinite set: String)
@@ -26,9 +26,8 @@
   * Set Category is special: we can peek inside the objects (e.g. an empty set has no elements)
     * there are special one element sets
     * functions map elements from one set to elements of another set
-    * they can map two elements to one, but not one element to two 
+    * they can map two elements to one, but not one element to two
     * identity functions maps every element to itself
-    
 * in an ideal world: Haskell types are sets and Haskell functions are mathematical functions between them
   * problem: computation takes place, which might involve recursion or might not terminate
   * solution: bottom type (indicating, that it does not terminate) - $\bot$
@@ -69,9 +68,9 @@
         graph TD
         a(("{Unit}")) -->b((Int))
       ```
-      * every call of the function is a different way of picking one element from the target type (in tthis case 44)
+      * every call of the function is a different way of picking one element from the target type (in this case 44)
       * -> call of the function is a different way of describing the element 44 from the int type
-      * pure functions that return Unit (or Void) discard their arguemnt (as they are not allowed to have side effects)
+      * pure functions that return Unit (or Void) discard their argument (as they are not allowed to have side effects)
     * unit: A -> Void
     * unit x = ()
       * maps every element of A to the element "Void" of the single set
@@ -85,8 +84,53 @@
   * two-element set: $Bool = {True, False}$
   * functions to Bool are called predicates
 ## Challenges
+### 1
 
-    
 
+```clojure
+
+;; a verbose memoization function
+
+(defn memoize-my-fun
+  "Returns a new version of f that caches results based on arguments. f has to be pure."
+  [f]
+  (let [my-cache (atom {})
+        compute-result-and-update-cache-content (fn [cache-content args]
+                                                  (let [result (apply f args)]
+                                                    (assoc cache-content args result)))]
+    (fn [& args] (if-let [cached-result (get @my-cache args)]
+                   (do
+                     (println "Found result in cache for args " args)
+                     cached-result)
+                   (do
+                     (println "Nothing in cache -> Computing " (str f " " args))
+                     (swap! my-cache compute-result-and-update-cache-content args)
+                     (get @my-cache args))))))
+
+;; for comparison: this is the memoize function from clojure.core - https://github.com/clojure/clojure/blob/master/src/clj/clojure/core.clj#L6387
+
+```
+
+### 2
+
+```clojure
+
+(def my-memoized-rand (memoize-my-fun rand))
+
+
+lein-test-app.core> (my-memoized-rand)
+Nothing in cache -> Computing  clojure.core$rand@292488e7 
+0.869602122274886
+lein-test-app.core> (my-memoized-rand)
+Found result in cache for args  nil
+0.869602122274886
+
+```
+
+-> works, value is cached :-)
+
+of course, the it is not random anymore
+
+### 3
 
 
