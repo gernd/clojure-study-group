@@ -155,4 +155,22 @@ d) not pure, static y is initialized with 0 but then changed -> will return diff
 
 -> in total these  2 functions would be sufficient to implement all possible mappings
 
-in theory there are an endless number of functions implementing these mappings
+* in Category Theory, this would be 2 morphisms
+
+* in a programming language, there are an endless number of functions implementing these mapping
+
+### 6
+```mermaid
+  graph TD
+  void((Void))
+  unit((Unit))
+  bool((Bool))
+  unit -- id --> unit
+  unit -- true --> bool
+  unit -- false --> bool
+  bool -- discard-parameter --> unit
+  bool -- id --> bool
+  bool -- negate --> bool
+```
+
+
