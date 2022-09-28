@@ -52,7 +52,7 @@
 * function having no side effects (e.g. computation of square root) can be easily modelled as a mathematical function
 * in a purely functional programming language like Haskell: all functions are pure -> easier to give them denotational semantics and model them using category theory
 * for other languages: always possible to restrict yourself to a pure subset
-* monads let us model all kind of affects using only pure functions
+* monads let us model all kind of effects using only pure functions
 ## Examples of types
 * exotic types: empty set (not inhabited by any values)
     * in Haskell: void
