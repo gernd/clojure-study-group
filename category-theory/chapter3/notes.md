@@ -21,8 +21,9 @@
 * needed for an partial order, an additional constraint has to be fullfilled: 
 a <= b and b <= a then a = b
 * if any two objects in the category are in relation with each other: total (linear) order
-* characterization of ordered sets as categories
+## Characterization of ordered sets as categories
   * preorder: category where there is at most one morphism going from any object a to any object (thin category)
+ * also see https://math.stackexchange.com/questions/2840312/how-is-a-preorder-a-thin-category 
   * A set of morphisms from object a to object b in category C is called a hom-set, written as C(a,b)
   * every hom-set in a preorder is either empty or a singleton
     * includes the hom-set C(a,a) containing identity
@@ -31,4 +32,26 @@ a <= b and b <= a then a = b
 * it is very important to be able to recognize preorders, partial orders and total orders because of sorting
 * sorting algorithms can only work correctly on total orders
 * partial orders can be soorted using topological sort
+## Monoid as Set
+* e.g. Multiplication and Addition form a monoid
+* defined as a set with a binary operation
+* requirements on the operation
+  * associative
+  * there is a special element that behaves like a unit (neutral element)
+* Neutral Element for addition: 0 (for multiplication: 1)
+* another example: string concatenation (neutral element: empty string)
+
+## Monoid as Category
+* example for binary function: adders (e.g a function that adds 5)
+* how do adders compose: following the rules of addition (+3 +5 -> new adder that adds 8)
+* identitiy functin: adder that adds 0
+* a monoid is a single object category (can be described as a single object 
+category with a set of morphisms that follow rules of composition)
+* we can always extract a set of morphmisms from a categorical monoid (e.g. for an Object o hom(o,o))
+* in our example, this would be the adders
+* we can then define a binary relation for these homomorphisms (monodial product = composition of morphisms)
+  * composiont of two morphisms always exists, because source and target are equal for both morphisms
+  * it is associative, because it is a category
+  * identity element = neutral element
+  * -> we can always recover a set monoid from a categorical monoid
 

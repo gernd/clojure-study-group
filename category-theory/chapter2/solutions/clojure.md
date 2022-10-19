@@ -86,3 +86,4 @@ d) not pure, static y is initialized with 0 but then changed -> will return diff
   bool -- discard-parameter --> unit
   bool -- id --> bool
   bool -- negate --> bool
+```
