@@ -54,15 +54,33 @@ will result in infinite arrows (combination of all possibilities for constructin
  * set with a binary operation
  * opration is associative and there is a neutral element
 ## Set-Theoretical Monoid for Bool with &&
-()
-
-
+* (a && b) && c = (a && (b && c)) for all a,b,c in Bool -> associative
+* neutral element: True
+ * True && True = True
+ * False && True = False
 
 ## Set-Theoretical Monoid for Bool with ||
+* (a || b) || c = (a || (b || c)) for all a,b,c in Bool -> associative
+* neutral element: False
+ * True || False = True
+ * False || False = False
 
+# 4
+* Single object: Bool (as a set of True and False)
+* Morphisms:
+  * and-true (= identity function)
+  * and-false
+* Compositions
+  * and-false . and-false = and-false
+  * id. and-false = and-false
+  * and-false . id = and-false
+  * id . id = id
 
-
-
-
-
-
+```mermaid
+graph TD
+ bool((Bool))
+ bool -- and-false --> bool
+ bool -- id --> bool
+ bool -- and-false . and-false --> bool
+ bool -- id . and false --> bool
+```
