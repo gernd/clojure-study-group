@@ -50,7 +50,7 @@ category with a set of morphisms that follow rules of composition)
 * we can always extract a set of morphmisms from a categorical monoid (e.g. for an Object o hom(o,o))
 * in our example, this would be the adders
 * we can then define a binary relation for these homomorphisms (monodial product = composition of morphisms)
-  * composiont of two morphisms always exists, because source and target are equal for both morphisms
+  * composition of two morphisms always exists, because source and target are equal for both morphisms
   * it is associative, because it is a category
   * identity element = neutral element
   * -> we can always recover a set monoid from a categorical monoid

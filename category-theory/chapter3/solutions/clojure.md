@@ -17,7 +17,7 @@ graph TD
  node -- a o id --> node
 ```
 
-## c 
+## c
 ```mermaid
 graph TD
  first-node((firstNode))
@@ -34,12 +34,35 @@ will result in infinite arrows (combination of all possibilities for constructin
 
 # 2
 ## a
-* composition works is associative -> preorder
-* if A subset B and B subset A -> A = B 
+* composition works
+* is associative -> preorder
+* if A subset B and B subset A -> A = B
 * partial order
 * any two objects are in relation with each other -> not neccessarily!
 
 ## b
+* composition: ok
+* associative: ok
+-> preorder
+* if T1 is a subtype of T2 and T2 is a subtype of T1 -> T1 = T2 ?
+-> i guess so
+-> any two objects are in relation? -> no
+-> partial order
+
+# 3
+* Reminder: Definition of a set-Monoid
+ * set with a binary operation
+ * opration is associative and there is a neutral element
+## Set-Theoretical Monoid for Bool with &&
+()
+
+
+
+## Set-Theoretical Monoid for Bool with ||
+
+
+
+
 
 
 
