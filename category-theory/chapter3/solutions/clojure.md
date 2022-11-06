@@ -84,3 +84,26 @@ graph TD
  bool -- and-false . and-false --> bool
  bool -- id . and false --> bool
 ```
+
+
+# 5
+* addition mod 3 will always result in values 0,1,2
+* Single Object: Int which is the set 0,1,2
+* Morphisms:
+  * plus-0-mod-3 (add 0 and then apply mod 3) <- identity function
+  * plus-1-mod-3 (add 1 then apply mod 3)
+  * plus-2-mod-3 (add 2 then apply mod 3)
+* Compositions
+ * id . id = id
+ * id . plus-1-mod-3 = plus-1-mod-3
+ * plus-1-mod-3 . id = plus-1-mod-3
+ * plus-1-mod-3 . plus-1-mod-3 = plus-2-mod-3
+ * we can create infinite compositions that follow rules of addition
+```mermaid
+graph TD
+ int((Int))
+ int -- plus-0-mod-3 --> int
+ int -- plus-1-mod-3 --> int
+ int -- plus-2-mod-3 --> int
+ int -- plus-1-mod-3 . plus-0-mod-3  --> int 
+```

@@ -54,4 +54,3 @@ category with a set of morphisms that follow rules of composition)
   * it is associative, because it is a category
   * identity element = neutral element
   * -> we can always recover a set monoid from a categorical monoid
-
