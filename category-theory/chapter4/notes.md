@@ -26,6 +26,3 @@
 * Kleisli Categories are categories based on monads
 * every Kleisli Category has a unique way of defining identity functions and compositions using the embellished functions as morphisms
 * in this examples, the writer monad was used
-
-
-
