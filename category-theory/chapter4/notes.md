@@ -26,3 +26,7 @@
 * Kleisli Categories are categories based on monads
 * every Kleisli Category has a unique way of defining identity functions and compositions using the embellished functions as morphisms
 * in this examples, the writer monad was used
+* Kleisli Categories have as objects the types of the underlying programming language
+* Morphisms from type A to type B are functions that go from A to a type derived from B using the particular embellishment
+* Each Kleisli Category defines its own way of composing such morphisms, as well as the identity morphisms with respect to that composition
+* in this category: morphisms (functions) do more than just pass the output from one function to another function
