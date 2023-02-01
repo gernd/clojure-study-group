@@ -24,6 +24,27 @@
 * category of sets: singleton set
 
 # Duality
-TODO
+* definition of the opposite category for a category C: just reverse all arrows
+* the new category automatically satisfies all the requirements of a category, if composition is redefined
+  accordingly.
+* the construction of the opposite category are often prefixed with co
+  * comonads
+  * coproducts
+  ...
+* the initial object in one category becomes the terminal object in the other category
 
+# Isomorphisms
+* in general: a definition of equality
+* intuition: isomorphic objects look the same - "they have the same shape"
+  * every part of one object corresponds to some part of another object in a one-to-one mapping
+  * mathematically: mapping exists from a to b and from b to a
+  * in category theory: mappings are replaced with morphisms
+  * isomorphism: invertible morphism: pair of morphisms, one being the inverse of the other
+  * f is the inverse of g (and vice versa) if:
+    * f o g = id
+    * g o f = id
+* read on: page 57 bottom
+
+
+# Next up: products
 
